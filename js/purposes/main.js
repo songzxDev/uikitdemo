@@ -244,6 +244,8 @@ function onClick(e, treeId, node) {
 
 function ukNavchildrenIsVisible(current) {
     var $current = $(current);
+    $current.parents("ul[name='boss']:first").find('.uk-active').removeClass('uk-active');
+    $current.parent().addClass('uk-active');
     var childrenIsVisible = $current.data('children-visible') + '';
     if(childrenIsVisible == 'false') {
         $current.next().removeClass('uk-hidden').attr('style', 'overflow: hidden; position: relative;');

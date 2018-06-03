@@ -96,13 +96,15 @@
                         '.uk-panel'}" data-uk-grid-margin="" style="min-height: 400px;background-color: rgb(255, 255, 255);">
         <div class="uk-width-1-3 uk-row-first">
             <div class="uk-panel uk-panel-box uk-panel-box-primary">
-                <div class="uk-width-medium-1-1 uk-row-first">
-                    <ul class="uk-nav uk-nav-side uk-nav-parent-icon uk-width-medium-9-10" data-uk-nav="">
+                <div class="uk-panel-box uk-width-9-10 uk-container-center" style="background-color: #FFFFFF;min-height: 400px;">
+                    <h3 class="uk-panel-title">&nbsp;&nbsp;Nav side in panel</h3>
+                    <ul name="boss" class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
+                        <li class="uk-nav-divider"></li>
                         <li class="uk-active">
-                            <a href="javascript:void(0);">Active</a>
+                            <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Active</a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">Item</a>
+                        <li class="">
+                            <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Item</a>
                         </li>
                         <li aria-expanded="false" class="">
                             <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
@@ -117,16 +119,16 @@
                             <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
                                 <ul class="uk-nav-sub">
                                     <li>
-                                        <a href="">Sub item</a>
+                                        <a href="javascript:void(0);">Sub item</a>
                                     </li>
                                     <li>
-                                        <a href="">Sub item</a>
+                                        <a href="javascript:void(0);">Sub item</a>
                                         <ul>
                                             <li>
-                                                <a href="">Sub item</a>
+                                                <a href="javascript:void(0);">Sub item</a>
                                             </li>
                                             <li>
-                                                <a href="">Sub item</a>
+                                                <a href="javascript:void(0);">Sub item</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -147,16 +149,16 @@
                             <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
                                 <ul class="uk-nav-sub">
                                     <li>
-                                        <a href="">Sub item</a>
+                                        <a href="javascript:void(0);">Sub item</a>
                                     </li>
                                     <li>
-                                        <a href="">Sub item</a>
+                                        <a href="javascript:void(0);">Sub item</a>
                                         <ul>
                                             <li>
-                                                <a href="">Sub item</a>
+                                                <a href="javascript:void(0);">Sub item</a>
                                             </li>
                                             <li>
-                                                <a href="">Sub item</a>
+                                                <a href="javascript:void(0);">Sub item</a>
                                             </li>
                                         </ul>
                                     </li>
