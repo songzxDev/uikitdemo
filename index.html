@@ -95,78 +95,84 @@
     <div class="uk-grid uk-grid-small uk-grid-match uk-panel-box" id="middle" data-uk-grid-match="{target:
                         '.uk-panel'}" data-uk-grid-margin="" style="min-height: 400px;background-color: rgb(255, 255, 255);">
         <div class="uk-width-1-3 uk-row-first">
-            <div class="uk-panel uk-panel-box uk-panel-box-primary">
-                <div class="uk-panel-box uk-width-9-10 uk-container-center" style="background-color: #FFFFFF;min-height: 400px;">
-                    <h3 class="uk-panel-title">&nbsp;&nbsp;Nav side in panel</h3>
-                    <ul name="boss" class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active">
-                            <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Active</a>
-                        </li>
-                        <li class="">
-                            <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Item</a>
-                        </li>
-                        <li aria-expanded="false" class="">
-                            <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
-                                <div class="uk-grid">
-                                    <div class="uk-width-1-2">Parent</div>
-                                    <div class="uk-width-1-2 uk-text-right">
-                                        <i class="uk-icon-angle-left uk-icon-small"></i>
-                                        <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+            <div class="uk-panel uk-panel-box uk-panel-box-primary uk-margin">
+                <!-- mode: 触发下拉菜单的行为, 可选值: hover或click, 默认值: hover -->
+                <!-- remaintime: 悬停模式下，自动关闭下拉菜单前的等待时间 -->
+                <div class="uk-button-dropdown" data-uk-dropdown="{mode:'hover',remaintime:'600000'}">
+                    <div class="uk-form">
+                        <input type="text" placeholder="请选择项目">
+                    </div>
+                    <div class="uk-dropdown uk-dropdown-bottom uk-panel-box uk-width-9-10" style="background-color: #FFFFFF;min-height: 300px;">
+                        <h3 class="uk-panel-title">&nbsp;&nbsp;Nav side in panel</h3>
+                        <ul name="boss" class="uk-nav uk-nav-dropdown" data-uk-nav="">
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active">
+                                <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Active</a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0);" onclick="ukNavchildrenIsVisible(this);">Item</a>
+                            </li>
+                            <li aria-expanded="false" class="">
+                                <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
+                                    <div class="uk-grid">
+                                        <div class="uk-width-1-2">Parent</div>
+                                        <div class="uk-width-1-2 uk-text-right">
+                                            <i class="uk-icon-angle-left uk-icon-small"></i>
+                                            <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+                                        </div>
                                     </div>
+                                </a>
+                                <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
+                                    <ul class="uk-nav-sub">
+                                        <li>
+                                            <a href="javascript:void(0);">Sub item</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Sub item</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);">Sub item</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Sub item</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
-                                <ul class="uk-nav-sub">
-                                    <li>
-                                        <a href="javascript:void(0);">Sub item</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Sub item</a>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:void(0);">Sub item</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);">Sub item</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li aria-expanded="false" class="">
-                            <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
-                                <div class="uk-grid">
-                                    <div class="uk-width-1-2">Parent</div>
-                                    <div class="uk-width-1-2 uk-text-right">
-                                        <i class="uk-icon-angle-left uk-icon-small"></i>
-                                        <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+                            <li aria-expanded="false" class="">
+                                <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
+                                    <div class="uk-grid">
+                                        <div class="uk-width-1-2">Parent</div>
+                                        <div class="uk-width-1-2 uk-text-right">
+                                            <i class="uk-icon-angle-left uk-icon-small"></i>
+                                            <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+                                        </div>
                                     </div>
+                                </a>
+                                <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
+                                    <ul class="uk-nav-sub">
+                                        <li>
+                                            <a href="javascript:void(0);">Sub item</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Sub item</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);">Sub item</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Sub item</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </a>
-                            <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
-                                <ul class="uk-nav-sub">
-                                    <li>
-                                        <a href="javascript:void(0);">Sub item</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Sub item</a>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:void(0);">Sub item</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);">Sub item</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
