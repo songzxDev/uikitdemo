@@ -8,6 +8,7 @@
     <title>UIkit Demo</title>
     <link rel="stylesheet" href="./plugins/uikit-2.25.0/css/uikit.min.css">
     <link rel="stylesheet" href="./plugins/zTree_v3-3.5.33/css/zTreeStyle/zTreeStyle.css">
+    <!-- <link rel="stylesheet" href="./plugins/dropdown/css/jquery.dropdown.min.css"> -->
     <style type="text/css">
         .ztree * {
             padding: 0;
@@ -94,7 +95,78 @@
     <div class="uk-grid uk-grid-small uk-grid-match uk-panel-box" id="middle" data-uk-grid-match="{target:
                         '.uk-panel'}" data-uk-grid-margin="" style="min-height: 400px;background-color: rgb(255, 255, 255);">
         <div class="uk-width-1-3 uk-row-first">
-            <div class="uk-panel uk-panel-box uk-panel-box-primary"></div>
+            <div class="uk-panel uk-panel-box uk-panel-box-primary">
+                <div class="uk-width-medium-1-1 uk-row-first">
+                    <ul class="uk-nav uk-nav-side uk-nav-parent-icon uk-width-medium-9-10" data-uk-nav="">
+                        <li class="uk-active">
+                            <a href="javascript:void(0);">Active</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Item</a>
+                        </li>
+                        <li aria-expanded="false" class="">
+                            <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">Parent</div>
+                                    <div class="uk-width-1-2 uk-text-right">
+                                        <i class="uk-icon-angle-left uk-icon-small"></i>
+                                        <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
+                                <ul class="uk-nav-sub">
+                                    <li>
+                                        <a href="">Sub item</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sub item</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Sub item</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li aria-expanded="false" class="">
+                            <a href="javascript:void(0);" name="parent" data-children-visible='false' onclick="ukNavchildrenIsVisible(this);">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">Parent</div>
+                                    <div class="uk-width-1-2 uk-text-right">
+                                        <i class="uk-icon-angle-left uk-icon-small"></i>
+                                        <i class="uk-hidden uk-icon-angle-down uk-icon-small"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <div name="children" class="uk-hidden" style="overflow: hidden; position: relative; height: 0px;">
+                                <ul class="uk-nav-sub">
+                                    <li>
+                                        <a href="">Sub item</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sub item</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Sub item</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
         <div class="uk-width-1-3">
             <div class="uk-panel uk-panel-box uk-panel-box-primary"></div>
@@ -137,6 +209,7 @@
     <script src="./plugins/zTree_v3-3.5.33/js/jquery.ztree.exedit.min.js"></script>
     <script src="./plugins/zTree_v3-3.5.33/js/jquery.ztree.excheck.min.js"></script>
     <script src="./js/purposes/main.js"></script>
+    <!-- <script src="./plugins/dropdown/js/jquery.dropdown.min.js"></script> -->
 </body>
 
 </html>

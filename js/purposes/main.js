@@ -242,6 +242,24 @@ function onClick(e, treeId, node) {
     alert("Do what you want to do!");
 }
 
+function ukNavchildrenIsVisible(current) {
+    var $current = $(current);
+    var childrenIsVisible = $current.data('children-visible') + '';
+    if(childrenIsVisible == 'false') {
+        $current.next().removeClass('uk-hidden').attr('style', 'overflow: hidden; position: relative;');
+        $current.data('children-visible', 'true');
+        $current.find('.uk-icon-angle-left').first().addClass('uk-hidden');
+        $current.find('.uk-icon-angle-down').first().removeClass('uk-hidden');
+    } else {
+        $current.next().addClass('uk-hidden').attr('style', 'overflow: hidden; position: relative;height: 0px;');
+        $current.data('children-visible', 'false');
+        $current.find('.uk-icon-angle-left').first().removeClass('uk-hidden');
+        $current.find('.uk-icon-angle-down').first().addClass('uk-hidden');
+    }
+}
+
+
+
 
 //动态的显示当前时间
 ;
